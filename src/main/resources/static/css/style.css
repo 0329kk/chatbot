@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f5f5f5;
+}
+
+#main-content {
+    max-width: 940px;
+    padding: 2em 3em;
+    margin: 0 auto 20px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* 吹き出しスタイルの基本設定 */
+.message-bubble {
+   padding: 10px;
+   border-radius: 20px;
+   display: inline-block;
+   max-width: 80%;
+}
+
+/* 自分のメッセージのスタイル */
+.my-message {
+   background-color: #DCF8C6; /* ライトグリーン */
+   text-align: right;
+}
+
+/* 他のユーザーのメッセージのスタイル */
+.other-message {
+   background-color: #EFEFEF; /* ライトグレー */
+   text-align: left;
+}
+
+/* ユーザー名のスタイル */
+.message-author {
+   font-weight: bold;
+   display: block;
+}
+
+/* 吹き出しを含むテーブル行のスタイル */
+.message-row {
+   border-bottom: none !important;
+}
+@charset "UTF-8";
