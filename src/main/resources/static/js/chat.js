@@ -21,10 +21,7 @@ function connect() {
         stompClient.subscribe('/topic/greetings', function (greeting) {
             showGreeting(JSON.parse(greeting.body).content);
         });
-                // 特定のユーザー宛のメッセージを受け取るための購読を設定
-//        stompClient.subscribe('/user/queue/messages', function (message) {
-//            showGreeting(JSON.parse(message.body).message);
-//        });
+
     });
 }
 
@@ -39,17 +36,14 @@ function disconnect() {
 function sendMessage() {
     stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val(),'message': $("#message").val()}));
     $("#message").val('');
- //       stompClient.send("/app/chat", {}, JSON.stringify({
-//	        'fromUser': $("#name").val(),
-//	        'toUser': $("#toUser").val(),
-//	        'message': $("#message").val()
-//	    }));
-//	    $("#message").val('');
 }
 
 function showGreeting(message) {
     $("#greetings").append("<tr><td>" + message + "</td></tr>");
 }
+
+
+
 
 $(function () {
     $("form").on('submit', function (e) {

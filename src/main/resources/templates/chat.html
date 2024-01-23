@@ -10,21 +10,12 @@
 <script th:src="@{/js/chat.js}"></script>
 </head>
 <body>
-	<noscript>
-		<h2 style="color: #ff0000">Seems your browser doesn't support
-			Javascript! Websocket relies on Javascript being enabled. Please
-			enable Javascript and reload this page!</h2>
-	</noscript>
 	<div id="main-content" class="container">
-		<!--div class="form-group">
-		    <label for="toUser">To:</label>
-		    <input type="text" id="toUser" class="form-control" placeholder="Recipient's username">
-		</div -->
 		<div class="row">
 			<div class="col-md-6">
 				<form class="form-inline">
 					<div class="form-group">
-						<label for="connect">WebSocket connection:</label>
+						<label for="connect">接続:</label>
 						<button id="connect" class="btn btn-default" type="submit">Connect</button>
 						<button id="disconnect" class="btn btn-default" type="submit"
 							disabled="disabled">Disconnect</button>
@@ -46,6 +37,12 @@
 				</form>
 			</div>
 		</div>
+<!-- 		<div class="row">
+    	<div class="col-md-12">
+        		<div id="greetings" class="messages-container"></div>
+    		</div>
+		</div> -->
+		
 		<div class="row">
 			<div class="col-md-12">
 				<table id="conversation" class="table table-striped">
